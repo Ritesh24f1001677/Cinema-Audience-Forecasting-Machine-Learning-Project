@@ -1,50 +1,109 @@
-# Cinema-Audience-Forecasting-Machine-Learning-Project
+# 🎬 Cinema Audience Forecasting – Machine Learning Project
 
-#Project_Overview 
-This project aims to forecast daily cinema audience attendance using historical data from online bookings and on-site ticket sales. By capturing time-series patterns, booking behavior, and calendar effects (weekends and holidays), the model predicts future audience demand for individual theatres. 
+## 📌 Project Overview
+This project focuses on forecasting **daily cinema audience attendance** using historical data from **online advance bookings** and **on-site POS ticket sales**. By leveraging **time-series patterns**, **booking behavior**, and **calendar effects** (weekends and holidays), the model predicts future audience demand for individual theatres.
 
-#Problem_Statement
-Given historical data from online booking platforms, POS ticket sales, daily visit records, and calendar information, the objective is to predict the number of audiences attending each theatre on future dates.
- This is a challenging time-series forecasting problem with seasonality, external factors, and sparse data (including zero-audience days due to closures).
+---
 
-#Dataset_Summary
-Data is collected from two platforms:
-BookNow – Online advance bookings
-CinePOS – On-site POS ticket sales
-Key files include theatre metadata, booking transactions, daily visit counts, calendar features, and theatre ID mappings.
+## 🎯 Problem Statement
+Given historical data from:
+- Online booking platforms  
+- On-site POS ticket sales  
+- Daily audience visit records  
+- Calendar and holiday information  
 
-#Key_Challenges
-Multiple data sources with different theatre IDs
-Sparse time series with zero-audience days
-Strong weekend and holiday effects
-Different online vs walk-in booking behaviors
+The objective is to **predict the number of audiences attending each theatre on future dates**.
 
-#Methodology
-Data Integration: Mapped theatres across platforms and aggregated bookings at theatre–date level
-Feature Engineering: Day-of-week, weekends, holidays, lag features, rolling statistics, and booking trends
-Modeling: Supervised time-series forecasting using statistical and machine learning regression models
-Zero-Audience Handling: Retained in training; excluded from scoring as per rules
+This is a **time-series forecasting problem** characterized by:
+- Strong seasonality  
+- External calendar effects  
+- Sparse data (including zero-audience days due to theatre closures)
 
-#Evaluation
-Predictions were generated for each theatre-date pair following the required submission format:
+---
 
-ID = book_theater_id + show_date
-audience_count = predicted value
+## 🗂 Dataset Summary
+The dataset integrates data from two platforms:
+- **BookNow** – Online advance booking platform  
+- **CinePOS** – On-site Point-of-Sale (POS) ticketing system  
 
-#Tools_Used
-Python, Pandas, NumPy, Matplotlib, Scikit-learn, and time-series feature engineering techniques.
+### Key Files
+- Theatre metadata  
+- Booking transaction records  
+- Daily visit counts  
+- Calendar features (weekends, holidays)  
+- Theatre ID mapping across platforms  
 
-#Key_Insights
-Strong weekly seasonality in audience attendance
-Holidays and weekends significantly boost footfall
-Online bookings are a leading indicator of walk-in audiences
-Theatre-specific patterns improve prediction accuracy
+---
 
-#Future_Scope
-Deep learning models (LSTM, Temporal CNN)
-Movie-level features (genre, release dates)
-Better modeling of theatre closures
-Probabilistic forecasting for uncertainty estimation
+## 🔍 Key Challenges
+- Multiple data sources with different theatre identifiers  
+- Sparse time series with zero-audience days  
+- Strong weekend and holiday effects  
+- Different online vs walk-in booking behaviors  
 
-#Conclusion
-This project showcases an effective time-series forecasting pipeline using multi-source data integration and feature engineering to predict cinema audience demand, closely reflecting real-world forecasting challenges in the entertainment industry.
+---
+
+## 🧠 Methodology
+
+### Data Integration
+- Mapped theatres across BookNow and CinePOS platforms  
+- Aggregated booking and visit data at **theatre–date** level  
+
+### Feature Engineering
+- Day of week  
+- Weekend indicator  
+- Holiday flag  
+- Lag features  
+- Rolling statistics  
+- Booking trend indicators  
+
+### Modeling
+- Framed as a **supervised time-series forecasting** problem  
+- Applied statistical and machine learning regression models  
+
+### Zero-Audience Handling
+- Zero-audience days retained during training  
+- Excluded from final scoring as per competition rules  
+
+---
+
+## 📈 Evaluation
+Predictions are generated for each theatre–date pair using the following submission format:
+
+
+---
+
+## 🛠 Tools & Technologies
+- Python  
+- Pandas & NumPy  
+- Matplotlib  
+- Scikit-learn  
+- Time-series feature engineering techniques  
+
+---
+
+## 📊 Key Insights
+- Audience attendance exhibits strong weekly seasonality  
+- Holidays and weekends significantly increase footfall  
+- Online bookings act as a leading indicator of walk-in audiences  
+- Theatre-specific patterns improve forecasting accuracy  
+
+---
+
+## 🚀 Future Scope
+- Deep learning models (LSTM, Temporal CNN)  
+- Incorporation of movie-level metadata (genre, release dates)  
+- Improved handling of theatre closures  
+- Probabilistic forecasting for uncertainty estimation  
+
+---
+
+## 🧾 Conclusion
+This project demonstrates an effective **time-series forecasting pipeline** using multi-source data integration and feature engineering to predict cinema audience demand. The approach closely mirrors real-world demand forecasting challenges in the entertainment industry.
+
+---
+
+## 📜 License
+This project is for educational and research purposes.
+
+
